@@ -1,0 +1,45 @@
+<html>
+    <form (ngSubmit)="saveCliente(saveClienteForm)" #saveClienteForm="ngForm">
+        <div class="mb-3">
+            <label for="nameTeam" class="form-label">Nombre</label>
+            <input [(ngModel)]="cliente.nombre" name="name" type="text" class="form-control" id="nameTeam">
+        </div>
+        <div class="mb-3">
+            <label for="nameTeam" class="form-label">Apellido</label>
+            <input [(ngModel)]="cliente.apellido" name="apellido" type="text" class="form-control" id="nameTeam">
+        </div>
+        <div class="mb-3">
+            <label for="nameTeam" class="form-label">DPI</label>
+            <input [(ngModel)]="cliente.dpi" name="dpi" type="text" class="form-control" id="nameTeam">
+        </div>
+        <div class="mb-3">
+            <label for="nameTeam" class="form-label">Fecha Nacimiento</label>
+            <input [(ngModel)]="cliente.fechaNacimiento" name="fecha_nacimiento" type="text" class="form-control"
+                id="nameTeam">
+        </div>
+        <div class="mb-3">
+            <label for="nameTeam" class="form-label">Direccion</label>
+            <input [(ngModel)]="cliente.direccion" min="0" name="direccion" type="text" class="form-control"
+                id="nameTeam">
+        </div>
+        <div class="mb-3">
+            <label for="nameTeam" class="form-label">Telefono</label>
+            <input [(ngModel)]="cliente.telefono" name="telefono" type="text" class="form-control"
+                id="nameTeam">
+        </div>
+        <div class="mb-3">
+            <label for="nameTeam" class="form-label">Correo Electronico</label>
+            <input [(ngModel)]="cliente.correoElectronico" min="0" name="correo_electronico" type="text" class="form-control"
+                id="nameTeam">
+        </div>
+       
+        
+        <div class=" modal-footer justify-content-center">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                <i class="fa fa-times-circle" aria-hidden="true"></i>Cancelar</button>
+            <button type="submit" class="btn btn-success" data-bs-dismiss="modal"><i class="fa fa-floppy-o"
+                    aria-hidden="true"></i> Guardar Cliente
+            </button>
+        </div>
+    </form>
+</html>
